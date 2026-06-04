@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ffffff;
+  --color-secondary: #a1a1aa;
+  --color-accent: #3b82f6;
+  --color-background: #09090b;
+  --color-surface: #18181b;
+  --color-border: #27272a;
+  
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-slate-300 antialiased selection:bg-accent/30;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply container mx-auto px-6 py-24;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg bg-white text-black font-semibold hover:bg-slate-200 transition-all duration-200 inline-flex items-center justify-center;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg border border-border text-white font-semibold hover:bg-white/5 transition-all duration-200 inline-flex items-center justify-center;
+  }
+
+  .card {
+    @apply bg-surface border border-border rounded-xl overflow-hidden transition-all duration-300;
+  }
+
+  .browser-mockup {
+    @apply relative bg-surface border border-border rounded-xl overflow-hidden shadow-2xl;
+  }
+
+  .browser-header {
+    @apply flex items-center gap-1.5 px-4 py-3 border-b border-border bg-surface/50;
+  }
+
+  .browser-dot {
+    @apply w-3 h-3 rounded-full bg-border;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full hover:bg-zinc-700 transition-colors;
+}

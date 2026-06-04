@@ -1,0 +1,68 @@
+---
+const pillars = [
+  {
+    title: "Industry-Specific Insight",
+    description: "I don't use generic templates. I understand the specific needs of cafes, restaurants, and gyms—from menu layouts to membership conversion paths."
+  },
+  {
+    title: "Mobile-First Conversion",
+    description: "Your customers are browsing on their phones while on the go. I build websites that load instantly and work perfectly on every mobile device."
+  },
+  {
+    title: "Performance & Speed",
+    description: "A slow website kills business. I use the latest technologies like Astro to ensure your site is among the fastest on the web."
+  },
+  {
+    title: "SEO Foundation",
+    description: "I build websites with search engines in mind, ensuring your local business is discoverable by customers in your area."
+  }
+];
+---
+
+<section id="about" class="section-container">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+    <div>
+      <h2 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">Your business deserves a <br /> <span class="text-slate-500">premium digital home.</span></h2>
+      <p class="text-xl text-slate-400 mb-12 leading-relaxed">
+        I'm a dedicated web designer focused on helping local businesses establish a professional online presence. Whether you run a cozy cafe, a high-energy gym, or a premium restaurant, I build the tools you need to attract more customers and grow your brand.
+      </p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
+        {pillars.map(pillar => (
+          <div class="space-y-3">
+            <h4 class="font-bold text-white text-lg">{pillar.title}</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">{pillar.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 pt-10 border-t border-border">
+        <div class="flex items-center gap-6">
+           <div class="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-2xl">
+             👨‍💻
+           </div>
+           <div>
+             <div class="text-white font-bold text-lg">BuildWithCosmo</div>
+             <div class="text-slate-500 text-sm">Freelance Designer & Developer</div>
+           </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="relative group">
+      <div class="aspect-[4/5] bg-surface border border-border rounded-3xl overflow-hidden shadow-2xl">
+        <div class="w-full h-full bg-zinc-900 flex items-center justify-center text-6xl opacity-20 grayscale group-hover:grayscale-0 transition-all duration-700">
+           🚀
+        </div>
+        <!-- Minimal overlay for professional feel -->
+        <div class="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent opacity-60"></div>
+        <div class="absolute bottom-10 left-10">
+           <div class="text-xs font-bold uppercase tracking-[0.2em] text-blue-500 mb-2">My Mission</div>
+           <div class="text-2xl font-bold text-white">Elevating Local Brands.</div>
+        </div>
+      </div>
+      <!-- Decorative element -->
+      <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/5 rounded-full blur-3xl -z-10"></div>
+    </div>
+  </div>
+</section>

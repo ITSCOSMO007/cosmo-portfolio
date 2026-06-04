@@ -1,0 +1,46 @@
+---
+const services = [
+  {
+    title: "Website Design",
+    description: "Modern, visually stunning designs tailored to your brand's unique identity."
+  },
+  {
+    title: "Business Websites",
+    description: "Professional digital presences for established local businesses and startups."
+  },
+  {
+    title: "Cafe & Restaurant Websites",
+    description: "Specialized designs with menu showcases and reservation-focused layouts."
+  },
+  {
+    title: "Gym & Fitness Websites",
+    description: "High-energy websites designed to drive memberships and class bookings."
+  },
+  {
+    title: "Landing Pages",
+    description: "Single-page sites optimized for specific marketing campaigns and lead generation."
+  },
+  {
+    title: "Website Redesigns",
+    description: "Transforming outdated sites into modern, fast, and mobile-friendly experiences."
+  }
+];
+---
+
+<section id="services" class="section-container bg-surface/30">
+  <div class="mb-16">
+    <h2 class="text-3xl md:text-5xl font-bold mb-4">Services.</h2>
+    <p class="text-slate-400 text-lg">Specialized web solutions for local industry leaders.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {services.map(service => (
+      <div class="card p-8 hover:border-white/20 transition-all group">
+        <h3 class="text-xl font-bold mb-4 group-hover:text-blue-500 transition-colors">{service.title}</h3>
+        <p class="text-slate-400 leading-relaxed">
+          {service.description}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
